@@ -31,12 +31,25 @@ a {
 #header nav > ul > li {
     width: 150px;
     float: left;
-    background: blue;
+    background: #6a38ff;
     text-align: center;
     padding: 10px 0;
+    position: relative;
 }
 #header nav > ul > li > a {
     color: white;
+}
+
+#header nav .sub {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 41px;
+    transition: height 0.5s;
+}
+#header nav ul li:hover .sub {
+    height: 123px;
 }
 
 #ad_1 {
@@ -44,7 +57,11 @@ a {
     margin-bottom: 30px;
 }
 
-#banner {}
+#banner {
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+    margin-bottom: 20px;
+}
 #banner > article {
     border: 1px solid #000;
     float: left;
@@ -58,9 +75,9 @@ a {
 
 #banner .banner_1 .tap {}
 #banner .banner_1 .tap h4 {
-    width: 100px;
-    background: #000;
-    color: #fff;
+    background: #fff;
+    color: #000;
+    float: left;
     padding: 10px 20px;
 }
 /* h4 태그 중에 "on"이라는 클래스명을 가진 선택자 */
@@ -86,7 +103,7 @@ a {
     width: 390px;
 }
 #banner .type1 h4 {
-    width: 100px;
+    width: 120px;
     background: #000;
     color: #fff;
     padding: 10px 20px;
@@ -98,7 +115,32 @@ a {
 }
 #banner .type1 img {
     /*  img tag = inline
-        img, input 태그는 inline */
+        img, input 태그는 inline 요소인데도 불구하고 딱 이 2개의 태그만 width & height 설정할 수 있다. */
     width: 100%;
     height: 160px;
+}
+
+#footer {}
+
+#footer .ft_logo {
+    float: left;
+    margin-right: 50px;
+}
+
+#footer .ft_right {
+    float: right;
+}
+
+#footer .ft_right ul {
+    width: 1000px;
+    margin-bottom: 50px;
+}
+
+#footer .ft_right ul > li {
+    float: left;
+    margin-right: 20px;
+}
+
+#footer .ft_right ul > li > a {
+
 }
