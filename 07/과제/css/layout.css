@@ -1,0 +1,96 @@
+*{margin:0;padding:0;box-sizing:border-box}
+ol,ul,dl{list-style:none;}
+
+.visual {
+    /* height: 452px; */
+    background: url("main_bg.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.visual h2 {
+    font-size: 60px;
+    margin-bottom: 60px;
+    padding-top: 120px;
+}
+
+.visual p {
+    line-height: 40px;
+    padding-bottom: 120px;
+}
+
+.ebooks_list {}
+
+.ebooks_list .inner {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* padding & border 사용시 해당 선택자가 */
+}
+
+.ebooks_list h3 {
+    font-size: 28px;
+    color: #9d9d9d;
+    font-weight: 400;
+    /* text-transform */
+    /* none /  */
+    /* default = none */
+    /* none : 입력한 그래도 출력 */
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.ebooks_list .ebooks {}
+
+.ebooks_list .ebooks {}
+
+.ebooks_list .ebooks ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ebooks_list .ebooks ul > li {
+    width: 210px;
+    margin-bottom: 60px;
+}
+
+.ebooks_list .ebooks ul > li div:first-child {
+    margin-bottom: 10px;
+}
+
+.ebooks_list .ebooks ul > li > p {
+    font-size: 20px;
+    color: #0075d8;
+    margin-bottom: 10px;
+}
+
+.ebooks_list .ebooks ul > li button {
+    display: block;
+    width: 100%;
+    height: 36px;
+    outline: none;
+    background: #fff;
+    border: 1px solid #0075d8;
+    font-size: 10px;
+    font-weight: bold;
+    color: #0075d8;
+    text-transform: capitalize;
+    /* button 태그의 cursor */
+    /* default = curaor:default */
+    cursor: pointer;
+    border-radius: 10px;
+    /* transition: all 1s; */
+    transition: background 1s, color 2s;
+}
+
+.ebooks_list .ebooks ul > li button:hover {
+    background: #0075d8;
+    color: #fff;
+}
