@@ -1,0 +1,71 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body {
+    padding: 50px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    border: 1px solid #000;
+    margin-bottom: 100px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 0, 255, 0.5);
+    transition: all 0.5s;
+}
+
+/* 할 수 있다면 부모에게 hover 가는게 좋습니다. */
+.box:hover .card {
+    transform: rotate(45deg);
+}
+
+/* ====================================================================== */
+
+.type2 .card {
+    transform-origin: left top;
+}
+
+.type3 .card {
+    transform-origin: right bottom;
+}
+
+.type4 .card {
+    transform-origin: 0% 100%;
+}
+
+.type5 .card {
+    transform-origin: 100% 100%;
+}
+
+/* ===================================================================== */
+
+/* perspective */
+
+.type6 {
+    perspective: 100px;
+}
+
+.type6:hover .card {
+    transform: rotateX(300deg);
+}
+
+.type7 {
+    perspective: 200px;
+}
+
+.type7:hover .card {
+    transform: rotateY(300deg);
+}
+
+.type8 {
+    perspective: 200px;
+    overflow: hidden;
+}
+
+.type8:hover .card {
+    transform: rotateY(25deg);
+}
