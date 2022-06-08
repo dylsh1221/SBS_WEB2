@@ -1,0 +1,49 @@
+* { margin: 0; padding: 0;}
+
+div {
+    width: 650px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+div img {
+    width: 200px;
+    margin: 6px;
+}
+
+/* blur - default = 0 */
+div img:nth-child(2) {
+    filter: blur(5px);
+}
+
+/* brightness - default = 1 */
+div img:nth-child(3) {
+    filter: brightness(1.5);
+}
+
+/* contrast 명암대비효과 - default = 1 */
+div img:nth-child(4) {
+    filter: contrast(1.5);
+}
+
+/* grayscale */
+div img:nth-child(5) {
+    filter: grayscale(0.5);
+}
+
+div img:nth-child(6) {
+    filter: saturate(0.5);
+}
+
+div img:nth-child(7) {
+    filter: hue-rotate(180deg);
+}
+
+div img:nth-child(8) {
+    filter: invert(0.8);
+}
+
+div img:nth-child(9) {
+    filter: sepia(0.8);
+}
