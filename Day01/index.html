@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 
+        시멘틱 마크업 (Semantic MarKup)
+
+        POSH(Plain Old Semactic) = 평범하고 오래된 의미론적인 HTML
+
+        <div> , <span> 아무 의미 없는 태그 non-semactic
+        <form> , <table>
+
+            1. 최적화 : 검색엔진 최적화 (SEO = Search Engine Optimization)
+            2. 접근성 : 사용자 = 장애인(시각 장애인) 스크린리더기가 네비게이션 길잡이로 태그를 참고합니다.
+            <img alt="">
+            3. 개발성 : 적절한 시멘틱 요소를 사용하지 않으면 스크립트나 스타일을 줄 때 설정이 까다로움
+
+            자문 : 해당 태그에 담길 콘텐크가 어떤건지 자문
+
+            시멘틱 마크업은 가벼운게 중요 ( = 직관적)
+            각각 html, cssm javascript 각각 분리되어 작성하는게 중요
+
+            CSS 는 Visual Design / HTML은 Structure Design
+     -->
+
+     <b>티비 광고 설정</b>
+     <br>
+
+     <strong>티비 광고 설정</strong>
+
+     <div style="font-weight:bold;color:red;">해당의 내용으로 중요합니다.</div>
+     <h1>해당의 내용으로 중요합니다.</h1>
+
+     <header>
+        <!-- 웹 문서의 머리말 -->
+        <!-- 주로 웹 페이지 상단에 보여지는 로고와 메뉴를 포함하여 지정 -->
+     </header>
+
+     <nav>
+        <ul>
+            <li></li>
+            <!-- 링크를 포함한 메뉴를 그룹화할 때 사용 -->
+            <!-- 하나하나 모든 링크와 메뉴를 일일이 nav 태그로 지정하지는 않습니다. -->
+            <!-- gnb(Global Navigation Bar) 에 주로 사용 -->
+        </ul>
+     </nav>
+
+     <main>
+        <!-- 해당 사이트의 중요한 콘텐츠 또는 모든 콘텐츠를 아울러서 담아둘 때 사용 -->
+        <!-- index 메인페이지 외에 sub 페이지에서도 사용 -->
+        <!-- IE에서는 지원하는 태그가 아닙니다. 사용시 주의 -->
+     </main>
+
+     <aside>
+        <!-- 간접적으로 문서와 관련된 내용을 담을 때 사용 -->
+        <!-- 사이드바 또는 콜아웃 상자로 사용 -->
+        <!-- 주로 구글 광고나 네이버 광고같은 사이드 배너에 사용 -->
+     </aside>
+
+     <figure>
+        <video src=""></video>
+        <img src="" alt="">
+        <figcaption>
+            <!-- text -->
+            <!-- 영상이나 음악, 이미지와 함께 설명이 동반되는 콘텐츠을 그룹화해서 지정할 때 사용 -->
+        </figcaption>
+     </figure>
+
+     <section>
+        <!-- 공간 = div의 대체자 = block 요소의 공간 표시 -->
+        <!-- 연관성 있는 콘텐츠를 그룹화할 때 사용 -->
+        <!-- section 안에 콘텐츠들은 주로 연관된 경우가 많습니다 -->
+     </section>
+
+     <article>
+        <!-- 태그 자체가 콘텐츠 -->
+     </article>
+
+     <footer>
+        <!-- 웹페이지 하단 콘텐츠를 표시할 때 사용 -->
+        <!-- 주로 기업의 정보, 약관, 하위메뉴, 연관된 사이트(페밀리 사이트), 연동 계열사 등을 표시할 때 사용 -->
+     </footer>
+
+    
+</body>
+</html>
