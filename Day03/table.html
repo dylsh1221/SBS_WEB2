@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/table.css">
+</head>
+<body>
+
+    <table>
+        <caption>테이블 제목</caption>
+
+        <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th colspan="2">제목셀 - 1 , 2</th>
+                <th>제목셀 - 3</th>
+                <th>제목셀 - 4</th>
+                <th>제목셀 - 5</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1번줄 - 1번칸</td>
+                <td colspan="2">1번줄 - 2,3번칸</td>
+                <td>1번줄 - 4번칸</td>
+                <td>1번줄 - 5번칸</td>
+            </tr>
+            <tr>
+                <td>2번줄 - 1번칸</td>
+                <td colspan="2" rowspan="2">2,3번줄 - 2,3번칸</td>
+                <td>2번줄 - 4번칸</td>
+                <td rowspan="2">2,3번줄 - 5번칸</td>
+            </tr>
+            <tr>
+                <td>3번줄 - 1번칸</td>
+                <td>3번줄 - 4번칸</td>
+                <td></td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <tr>
+                    <td>결과 - 1번칸</td>
+                    <td>결과 - 2번칸</td>
+                    <td>결과 - 3번칸</td>
+                    <td>결과 - 4번칸</td>
+                    <td>결과 - 5번칸</td>
+                </tr>
+            </tr>
+        </tfoot>
+    </table>
+    
+</body>
+</html>
