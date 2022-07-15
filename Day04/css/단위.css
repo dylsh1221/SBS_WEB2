@@ -1,0 +1,108 @@
+* {margin: 0; padding: 0; border: 0; box-sizing: 0; }
+ol,ul { list-style: none; }
+
+/* 
+    CSS 단위
+    - 절대 단위 : in , cm , mm , pt , px = 출력장치(모니터)의 물리적 속성을 아는 경우
+    - 상대 단위 : % , em , rem , vw , vh , vmin , vmax = 기종간 플랫폼 간의 호환성을 유지
+        => 모바일 / 테블릿 / 웹사이트 모두에 호환되는 반응형 작업시 상대 단위가 유리
+*/
+
+/* 
+    px(pixel) : 절대값으로 사용되는 단위 , 웹디자이너들이 가장 많이 사용
+                디자인을 넘겨 받을 때도 px로 작업해서 넘겨주기 때문에 많이 사용
+                고정된 값이기 때문에 사용하기 편하고 이해가 쉽지만 반응형에는 X
+    
+    pt(point) : 웹사이트 프린트에 사용되는 단위
+
+    em : 부모 엘리먼트 font-size를 기준(상속 받은 font-size)으로 한 상대 단위 (1 = 100%)
+        - 과거에 폰트 디자인의 기준점을 안파벳 "M"으로 잡은 것에서 유래
+        - 가장 폭이 넓고 네모꼴이라서 "M"이라는 글자의 소리를 따서 지금의 em 으로 사용
+        - 일부 영역에 대한 사이즈를 조절할 때 효울적
+
+    rem(root em) : 최상위 요소인 html의 font-size를 기준 (1 = 100%)     root = 최상위
+        html default size = 16px
+
+    em & rem을 사용해야하는 경우에 모듈에 이런 css를 넣고 작업하시기를 권장
+    html {font-sizw:10px} , html {font-size:62.5%} 권장     10px = 62.5%        %로 하는 경우는 모바일에서 확대를하는 경우를 위해서 하는게 좋음(브라우저마다 다름)
+
+    % : 친부모의 size를 기준
+        - position의 속성값에 따라 기준이 변경됩니다.
+        - position:absolute = 기준점을 설정한 해당 부모의 기준으로 변경
+        - position:fixed = html 최상위를 기준으로 변경
+
+    % 쓸 때 주의사항 = position이 있는지 없는지 , 친부모가 높이값을 어디서 받아 오는지??
+*/
+
+/* html {
+    height: 100%;
+} */
+
+body {
+    /* height: 100%; */
+    position: relative;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    background: hotpink;
+    /* position: absolute; */
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+/* html {
+    font-size: 30px;
+} */
+
+.box1 {
+    font-size: 10px;
+}
+
+.box1 ul {
+    font-size: 2em;
+    /* 2em = 10px * 2 */
+}
+
+.box1 ul li {
+    font-size: 1.5em;
+    /* 2em = 10px * 1.5 */
+}
+
+.box1 ul section {
+    font-size: 1em;
+    /* 2em = 10px * 1 */
+}
+
+.box1 ul section article {
+    font-size: 0.5em;
+    /* 2em = 10px * 0.5 */
+}
+
+body {
+    height: 3000px;
+}
+
+html {
+    font-size: 62.5%;
+    /* html의(16px) 62.5% = 10px */
+}
+
+.box2 {
+    font-size: 2rem;
+    /* 20px */
+}
+
+.box2 ul {
+    font-size: 3rem;
+}
+
+.box2 ul li {
+    font-size: 2rem;
+}
+
+.box2 ul li p {
+    font-size: 1.5rem;
+}

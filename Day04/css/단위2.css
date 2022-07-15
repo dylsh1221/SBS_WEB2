@@ -1,0 +1,35 @@
+* {margin: 0; padding: 0; border: 0; box-sizing: 0; }
+ol,ul { list-style: none; }
+
+/* 
+    vw : view width , 1 = 1% (브라우저 width 기준 ! = html)
+    vh : view height , 1 = 1% (브라우저 height 기준)
+    vmin : view min = width & height 중 크기가 작은 쪽을 기준
+    vmax : view max = width & height 중 크기가 큰 쪽을 기준
+    (vmin 과 vmax는 테블릿&모바일에서 가로&세로 반응형할 때 주로 사용)
+*/
+
+.box1 {
+    font-size: 10vw;
+}
+
+.box2 {
+    font-size: 10vh;
+}
+
+.box3 {
+    font-size: 15vmin;
+}
+
+.box4 {
+    font-size: 5vmax;
+}
+
+.box5 {
+    width: 100%;
+    height: 100vh;
+    background: cornflowerblue;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
