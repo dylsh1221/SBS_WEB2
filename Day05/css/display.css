@@ -1,0 +1,71 @@
+* { margin: 0; padding: 0; border: 0; box-sizing: border-box; }
+ol,ul { list-style: none; }
+body { margin: 50px 0; }
+
+/* 
+    inline 요소
+        1. 요소들끼리 가로 배치
+        2. 자식 요소의 width, height에 비례하여 크기를 정합니다.
+        3. width , height 크기를 스스로 지정할 수 없습니다.
+        4. margin , padding 크기를 좌/우만 지정할 수 있습니다.
+        5. 해당 요소의 태그들 간의 여백이 존재합니다.
+            (브라우저마다 여백 간경이 상이하며 2 ~ 6px 여백이 존재)
+            (부모요소에게 font-size:0; 속성을 줘서 여백을 없앱니다. 상속을 받아야만 여백이 없어집니다.)
+
+    block 요소
+        2. 요소들끼리 세로 배치
+        2. 자식 요소의 height 비례하여 크기를 정합니다.
+        3. width , height 크기를 스스로 지정할 수 있습니다.
+        4. margin , padding 크기를 좌/우/상/하 모두 지정할 수 있습니다.
+        5. width : 100% 가 default로 지정되어 있습니다.
+*/
+
+body {
+    height: 4000px;
+}
+
+span {
+    width: 200px;
+    height: 200px;
+    background: tomato;
+    border: 2px solid black;
+    display: block;
+}
+
+p {
+    width: 200px;
+    height: 200px;
+    background: orange;
+    border: 2px solid black;
+    display: inline;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    background: green;
+    border: 2px solid black;
+    display: inline-block;
+    /* 
+        1. 가로 배치 (inline)
+        2. 태그간의 간격이 존재 (inline)
+        3. width , height 스스로 지정 가능 (block)
+        4. margin , padding : 좌/우/상/하 지정 가능 (block)
+    */
+}
+
+/* display:none 과 visivility:hidden 과의 차이 */
+
+article {
+    width: 200px;
+    height: 200px;
+    background: cornflowerblue;
+    margin: 20px;
+    border: 2px solid black;
+}
+
+/* article:nth-of-type(2) { display: none; } */
+
+article:nth-of-type(2) {
+    visibility: hidden;
+}
