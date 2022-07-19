@@ -1,0 +1,173 @@
+/* .fa-apple-whole {
+    color: hotpink;
+    font-size: 100px;
+}
+
+.fa-facebook {
+    font-size: 80px;
+} */
+
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+* { margin: 0; padding: 0; border: 0; box-sizing: border-box;}
+ol,ul { list-style: none; }
+a { text-decoration: none; }
+/* font-family: 'Orbitron', sans-serif; */
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+#wrap {
+    width: 340px;
+    padding: 30px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);    /* 브라우저가 커지든 작아지든 정중앙을 잡아줌 */
+    border-radius: 10px;
+    box-sizing: 10px 10px 30px rgba(0,0,0,.1);
+}
+
+#wrap .menu::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#wrap .menu a {
+    font-size: 20px;
+    color: #666;
+}
+
+#wrap .menu a:nth-of-type(1) {
+    float: left;
+}
+
+#wrap .menu a:nth-of-type(2) {
+    float: right;
+}
+
+#wrap .profile {
+    width: 100%;
+    text-align: center;
+}
+
+#wrap .profile img {
+    width: 200px;
+    border-radius: 50%;     /* width값 상관없이 정원을 만들고 싶다면 50% */
+    margin-bottom: 20px;
+
+    /* 
+        inline 요소는 width &height 스스로 설정 불가능
+        margin , padding : 좌/우만 가능
+        에외 = <img> , <input> 태그 width & height 설정가능
+        margin , padding : 좌/우/상/하 가능
+        img 태그와 input 태그는 빈 태그 이기에 가능하다. (정보를 보여주거나 받는 태그)
+    */
+}
+
+#wrap .profile h1 {
+    font: bold 22px/1 "arial";
+    color: #555;
+    margin-bottom: 5px;
+}
+
+#wrap .profile p {
+    font: 12px/1 "arial";
+    /* font 속성은 굵기를 생략하면 normal이 default로 적용 */
+    color: #bbb;
+    margin-bottom: 30px;
+}
+
+#wrap .profile .btnView {
+    display: block;
+    width: 180px;
+    height: 32px;
+    margin: 0 auto;
+    text-shadow: 0 0 5px rgba(255, 255, 255, .6);
+    font: bold 14px/32px "arial";
+    color: #fff;
+    border-radius: 16px;
+}
+
+#wrap .contact {
+    margin-bottom: 25px;
+}
+
+#wrap .contact > li {
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#wrap .contact > li:last-child {
+    border-bottom: none;
+}
+
+#wrap .contact > li i {
+    width: 20%;
+    text-align: center;
+    color: #555;
+    font-size: 15px;
+    text-shadow: 2px 2px 2px #ddd;
+}
+
+#wrap .contact > li span {
+    font: 11px/1 "orbitron";
+    color: #555;
+    letter-spacing: 1px;
+}
+
+#wrap .others {
+    text-align: center;
+    font-size: 0;
+}
+
+#wrap .others a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: gray;
+    border-radius: 50%;
+    margin: 0 10px;
+    opacity: 0.4;
+}
+
+#wrap .others a.on {
+    opacity: 1;
+}
+
+#wrap .others a:nth-of-type(1) {
+    background: aqua;
+    box-shadow: 5px 5px 10px rgb(0, 255, 255, .5);
+}
+
+#wrap .others a:nth-of-type(2) {
+    background: #42ec78;
+    box-shadow: 5px 5px 10px rgb(66, 236, 120, .5);
+}
+
+#wrap .others a:nth-of-type(3) {
+    background: hotpink;
+}
+
+#wrap .others a:nth-of-type(4) {
+    background: #9410c8;
+}
+
+/* member1 custom */
+.member1 {
+    background: lightcyan;
+}
+
+.member1 #wrap .profile img {
+    box-shadow: 5px 15px 30px rgb(143, 253, 253 , .8);
+}
+
+.member1 #wrap .profile .btnView {
+    background: linear-gradient(45deg, aqua, #94e1ff);
+    box-shadow: 5px 10px 20px rgba(0, 255, 255, 0.5);
+}
