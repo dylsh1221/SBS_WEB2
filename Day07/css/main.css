@@ -1,0 +1,258 @@
+body {
+    height: 4000px;
+}
+
+.box1 {
+    width: 200px;
+    height: 200px;
+    background: red;
+    transition-property: border-radius, background;
+    transition-duration: 2s;
+}
+
+.box1:hover {
+    border-radius: 50%;
+    background: blue;
+}
+
+.box2 {
+    width: 400px;
+    height: 200px;
+    background: orange;
+    transition-property: width, background;
+    transition-duration: 1s;
+}
+
+.box2:hover {
+    width: 200px;
+    background: green;
+}
+
+.box3 {
+    width: 400px;
+    height: 200px;
+    border: 2px solid black;
+}
+
+.box3 .box3-1 {
+    width: 400px;
+    height: 200px;
+    background: orange;
+    transition: all 1s;
+}
+
+.box3:hover .box3-1 {
+    width: 200px;
+    background: green;
+}
+
+.box4 {
+    width: 300px;
+    height: 300px;
+    background: green;
+    position: relative;
+}
+
+.box4 .box4-1 {
+    width: 150px;
+    height: 150px;
+    background: lightgreen;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 0.5s;
+}
+
+.box4:hover .box4-1 {
+    right: -75px;
+    top: -75px;
+}
+
+.box5 {
+    width: 200px;
+    height: 200px;
+    background: aqua;
+    transition: all 5s;
+}
+
+.box5:hover {
+    border-radius: 50%;
+    background: black;
+    transition: all 2s;
+}
+
+.box6 {
+    width: 200px;
+    height: 200px;
+    background: #eee;
+    position: relative;
+}
+
+/* .box6::before {
+    content: "첫 가상태그";
+    border: 2px solid red;
+}
+.box6::after {
+    content: "끝 가상태그";
+    border: 2px solid red;
+} */
+
+/* 
+    <br> , <hr> ,<input> , <img> 같이 닫힘 태그가 없는 빈 태그들은 가상 선택자(::before , ::after)를 사용할 수 없다.
+*/
+
+.box6::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    opacity: 0;
+    transition: 1s;
+}
+
+.box6:hover::before {
+    opacity: 1;
+}
+
+.box7 {
+    width: 400px;
+    height: 200px;
+    border: 2px solid red;
+    position: relative;
+}
+
+.box7 .box7-1 {
+    width: 100px;
+    height: 100px;
+    background: blue;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* transition-property: left , background; */
+    /* transition-duration: 2s; */
+    /* transition-timing-function: cubic-bezier(.26,-0.75,.75,1.69); */
+    transition: left, background, 2s cubic-bezier(.26,-0.75,.75,1.69);
+}
+
+.box7:hover .box7-1 {
+    left: 300px;
+    background: cornflowerblue;
+}
+
+.box8 {
+    width: 700px;
+    border: 2px solid black;
+    margin: 30px;
+}
+
+.box8 .list {
+    width: 30px;
+    height: 50px;
+    background: cornflowerblue;
+    margin: 10px;
+    transition: 5s;
+}
+
+.box8:hover .list {
+    width: 680px;
+}
+
+/* .box8 .list:nth-of-type(1) { transition-delay: 0s;}
+.box8 .list:nth-of-type(2) { transition-delay: 1s;}
+.box8 .list:nth-of-type(3) { transition-delay: 2s;}
+.box8 .list:nth-of-type(4) { transition-delay: 3s;}
+.box8 .list:nth-of-type(5) { transition-delay: 4s;} */
+
+/* .box8 .list:nth-of-type(1) { transition-timing-function: linear; }
+.box8 .list:nth-of-type(2) { transition-timing-function: ease; }
+.box8 .list:nth-of-type(3) { transition-timing-function: ease-in; }
+.box8 .list:nth-of-type(4) { transition-timing-function: ease-in-out; }
+.box8 .list:nth-of-type(5) { transition-timing-function: ease-out; } */
+
+.box8:hover .list:nth-of-type(1) {
+    width: 100px;
+    background: red;
+}
+
+.box8:hover .list:nth-of-type(2) {
+    width: 200px;
+    background: orange;
+}
+
+.box8:hover .list:nth-of-type(3) {
+    width: 300px;
+    background: yellow;
+}
+
+.box8:hover .list:nth-of-type(4) {
+    width: 400px;
+    background: green;
+}
+
+.box8:hover .list:nth-of-type(5) {
+    width: 500px;
+    background: blue;
+}
+
+.box8 .list {
+    transition-property: width , background;
+    transition-duration: 5s ,1s;
+}
+
+.nav {
+    width: 200px;
+    list-style: none;
+    padding: 0;
+}
+
+.nav li {
+    font: bold 14px/40px "arial";
+    background: #000;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid #808080;
+    cursor: pointer;
+}
+
+.nav li .sub {
+    height: 0;
+    list-style: none;
+    padding: 0;
+    transition: all 0.25s;
+    overflow: hidden;
+}
+
+.nav li:hover .sub {
+    height: 164px;
+    transition: all 0.5s;
+}
+
+.sub li {
+    background: #999;
+    font: bold 12px/40px "arial";
+    border-bottom: 1px solid #777;
+}
+
+.sub li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.box9 {
+    height: 200px;
+    border: 5px solid blueviolet;
+}
+
+.box9 .box9-1 {
+    width: 100%;
+    height: 200px;
+    background: tomato;
+    transition: all 1s;
+}
+
+.box9:hover .bpx9-1 {
+    width: 200px;
+}
