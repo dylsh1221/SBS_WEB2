@@ -1,0 +1,169 @@
+* {margin: 0; padding: 0; border: 0; box-sizing: border-box; }
+ol,ul { list-style: none; }
+a {text-decoration: none; color: inherit; }
+body { padding: 10px; text-align: center; height: 4000px; }
+
+.card {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px;
+    min-width: 200px;
+    box-shadow: 0 3px 5px #ddd;
+    color: #555;
+}
+
+.card .box {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background: #ddd;
+    box-shadow: 0 0 5px #ccc inset;
+    cursor: pointer;
+}
+
+.card .box .fill {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: #5d94fc;
+    opacity: .5;
+    box-shadow: 0 0 5px #ccc;
+    transition: all 0.5s;
+}
+
+/* 
+    transform 속성
+    - 좌표공간을 변경함으로서 일반적인 문서 흐름을 방해하지 않고 콘텐츠의 형태와 위치를 바꿉니다.
+
+    1. 주변 레이아웃에 영향을 주지 않고 스스로 혼자 변형
+    2. 좌표공간(x축,y축)의 대한 개념을 이해해야 합니다.
+
+    - rotate (회전 효과) : rotateX() , rotateY() , rotate(x,y)
+    - scale (확대.축소 효과) : scaleX() , scaleY() , sclae(x,y)
+    - skew (비틀기 효과) : skewX() , skewY() , skew(x,y)
+    - translate (이동효과) : translateX() , translateY() , translate(x,y)
+*/
+
+/* rotate
+    - 회전의 각도가 양수이면 시계방향 , 음수이면 시계 반대방향으로 회천
+    단위 = deg
+*/
+
+.rotate:hover .fill {
+    transform: rotate(135deg);
+}
+
+.rotateX:hover .fill {
+    transform: rotateX(45deg);
+}
+
+.rotateY:hover .fill {
+    transform: rotateY(45deg);
+}
+
+/* scale
+    일정한 수치로 요소의 크기를 배가시켜서 그 크기를 조절하도록 합니다.
+    댄위 = 1 (default) 1보다 작으면 작아지고 1보다 크면 커집니다.
+*/
+
+.scale:hover .fill {
+    transform: scale(1.5);
+}
+
+.scaleX:hover .fill {
+    transform: scaleX(2);
+}
+
+.scaleY:hover .fill {
+    transform: scaleY(2);
+}
+
+/* skew
+    x축 y축 기준으로 각도를 두어 모양을 비틀어줍니다
+    단위 = deg
+ */
+
+ .skew:hover .fill {
+    transform: skew(45deg,45deg);
+ }
+
+ .skewX:hover .fill {
+    transform: skewX(45deg);
+ }
+
+ .skewY:hover .fill {
+    transform: skewY(45deg);
+ }
+
+ /* translate
+    x축 y축 상에서 해당 요소를 본래 위치로부터 이동
+    (position:relative 개념이 비슷)
+    이동을 해도 본래 위치의 영역은 존재
+    단위 = px , % , em , tem
+ */
+
+ .translate:hover .fill {
+    transform: translate(45px, 100px);
+ }
+
+ .translateX:hover .fill {
+    transform: translateX(45px);
+ }
+
+ .translateY:hover .fill {
+    transform: translateY(-45px);
+ }
+
+ /* 
+    transform 3D - perspective = 원근감
+    - 부모와 자식간의 원근감을 설정
+    - 단위 = px
+    - 원근감을 표시할 부모에게 사용
+ */
+
+ .pers-100 .box {
+    perspective: 100px;
+ }
+
+ .pers-100 .rotateX:hover .fill {
+    transform: rotateX(-45deg);
+ }
+
+ .pers-100 .rotateY:hover .fill {
+    transform: rotateY(-45deg);
+ }
+
+ .pers-200 .box {
+    perspective: 200px;
+ }
+
+ .pers-200 .rotateX:hover .fill {
+    transform: rotateX(-360deg);
+ }
+
+ .pers-200 .rotateY:hover .fill {
+    transform: rotateY(360deg);
+ }
+
+ /* 
+    transform-origin : 변형되는 콘텐츠의 축을 설정
+    - transform 함께 사용
+    - transform: x-point , y-point , z-point
+    - x & y = 50% default
+    - z = 0 default
+    - 0%에 가까울수록 left & top 기준
+    - 100%에 가까울수록 right &bottom 기준
+    - z축은 생략 가능
+ */
+
+ .to-left-top {
+    transform-origin: left top;
+ }
+
+ .to-right-bottom {
+    transform-origin: right bottom;
+ }
+
+ .origin .rotate:hover .fill {
+    transform: rotate(45deg);
+ }
