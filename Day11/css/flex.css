@@ -1,0 +1,58 @@
+* { margin: 0; padding: 0; border: 0; }
+
+main {
+    width: 100%;
+    height: 100vh;
+    background: lightcyan;
+}
+
+main section {
+    /* width: 100%; */
+    height: 100%;
+    border: 10px solid blue;
+    box-sizing: border-box;
+
+    display: flex;
+    /* display: inline-flex; */
+    flex-direction: row;
+    /* flex-direction : flex item의 메인축을 설정해주는 속성
+        row(default) / row-reverse / column / colunm-reverse
+    */
+    flex-wrap: wrap;
+    /* flex-wrap : flex item들의 총 넓이가 부모 넓이보다 클 때 다음 줄에 이어서 정렬해줄지 설정하는 속성
+        nowrap(default) / wrap / wrap-reverse
+    */
+
+    flex-flow: row nowrap;
+    /* flex-flow : flex-direction & flex-wrap 속성을 합친 약식 속성
+        flex-flow : direction wrap
+    */
+
+    justify-content: center;
+    /* justify-content = 좌우축에 대한 정렬을 설정하는 기능
+        (중심축을 중심으로 flex item의 정렬을 설정하는 기능)
+        flex-start(default) / flex-end / center / space-around / space-evenly / space-between
+    */
+
+    align-content: center;
+    /* align-content : 줄바꿈이 되면 flex item 정렬을 설정하는 속성
+        flex-wrap의 속성의 값이 wrap 이어야만 작동 (justify-content의 반대축)
+        flex-start(defaule) / flex-end / cneter
+    */
+}
+
+main section article {
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    border: 1px solid #000;
+    font: bold 20px/100px "arial";
+    text-align: center;
+    color: #fff;
+}
+
+/* span {
+    width: 200px;
+    height: 200px;
+    background: red;
+} */
