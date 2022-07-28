@@ -1,0 +1,59 @@
+* { margin: 0; padding: 0; border: 0; box-sizing: border-box; }
+ol,ul { list-style: none; }
+a { text-decoration: none; color: inherit;}
+input[type="text"] {}
+
+#header {
+    background: tomato;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+#header .gnb {
+    display: flex;
+}
+
+#header .gnb > li {
+    margin-right: 50px;
+}
+
+#neader .gnb > li:last-child {
+    margin-right: 0;
+}
+
+#header .search {
+
+}
+
+#header .search input {
+    background: transparent;    /* 투명색 */
+    border: none;
+    outline: none;
+    padding-left: 0 10px 5px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    width: 150px;
+}
+
+#header .search input::placeholder {
+    color: #fff;
+}
+
+#header .search button {
+    width: 100px;
+    padding: 5px 0;
+    background: white;
+    outline: none;
+    color: red;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid transparent;      /* 선이 생기는 작업을 할때는 투명색을 줘서 덜컹거림을 없애는게 좋음 */
+}
+
+#header .search button:hover {
+    color: #fff;
+    background: tomato;
+    border: 1px solid #fff;
+}

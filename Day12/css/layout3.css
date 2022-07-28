@@ -1,0 +1,43 @@
+* { margin: 0; padding: 0; border: 0; box-sizing: border-box; }
+ol,ul { list-style: none; }
+a { text-decoration: none; color: inherit;}
+
+#container {
+    height: 100vh;
+    display: flex;
+}
+
+#container section {
+    flex: 1;        /* flex: 1 1 auto; 의 줄임말 */
+    position: relative;
+    transition: all 0.3s;
+}
+
+#container section:hover {
+    flex: 3;
+}
+
+#container section:nth-of-type(1) {
+    background: tomato;
+}
+
+#container section:nth-of-type(2) {
+    background: green;
+}
+
+#container section:nth-of-type(3) {
+    background: cornflowerblue;
+}
+
+#container section h3 {
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(90deg);
+    transition: all 0.35s;
+}
+
+#container section:hover h3 {
+    transform: translate(-50%,-50%) rotate(0);
+}
