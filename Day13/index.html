@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <script src="https://kit.fontawesome.com/2856abde01.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <main>
+
+        <header>
+            <h1>
+                <i class="fa-brands fa-freebsd"></i>
+                <span>WEB DEVELOP</span>
+            </h1>
+            <p>2022 WEBPUBLY &COPY; ALL RIGHTS RESERVED</p>
+        </header>
+
+        <section>
+
+            <!-- article*4>div.inner -->
+            <article>
+                <div class="inner">
+                    <div class="txt">
+                        <h2>01</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dolore, nostrum id corporis magni quidem?</p>
+                    </div>
+                    <figure>
+                        <video src="video/vid1.mp4" loop muted></video>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <div class="inner">
+                    <div class="txt">
+                        <h2>02</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita exercitationem id laboriosam modi tempore perferendis.</p>
+                    </div>
+                    <figure>
+                        <video src="video/vid2.mp4" loop muted></video>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <div class="inner">
+                    <div class="txt">
+                        <h2>03</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo optio esse quos, inventore aliquid perspiciatis?</p>
+                    </div>
+                    <figure>
+                        <video src="video/vid3.mp4" loop muted></video>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <div class="inner">
+                    <div class="txt">
+                        <h2>04</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, soluta neque est rerum incidunt sit.</p>
+                    </div>
+                    <figure>
+                        <video src="video/vid4.mp4" loop muted></video>
+                    </figure>
+                </div>
+            </article>
+
+        </section>
+
+        <nav>
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-search"></i></a></li>
+            </ul>
+        </nav>
+    </main>
+
+    <script>
+        const articles = document.querySelectorAll("article");
+
+        articles.forEach((article)=>(
+            article.addEventListener("mouseenter",e=>{
+                e.currentTarget.querySelector("video").play();
+            })
+            article.addEventListener("mouseleave",e=>{
+                e.currentTarget.querySelector("video").play();
+            })
+
+        ));
+    </script>
+    
+</body>
+</html>
