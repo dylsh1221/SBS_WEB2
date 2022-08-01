@@ -1,0 +1,101 @@
+* { margin: 0; padding: 0; border: 0; box-sizing: border-box; }
+ol,ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
+
+header {
+    background: #2d2d2d;
+    color: #fff;
+    padding: 15px 50px;     /* 요듬 사이트에서는 20~30px 정도 주는거 같음 */
+}
+
+header .inner {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .logo {
+    font-size: 0;
+}
+
+header .logo a {
+    display: block;
+}
+
+header .gnb ul {
+    display: flex;
+}
+
+/* header .gnb ul li:nth-of-type(2) {
+    padding: 0 50px;
+    margin: 0 50px;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+} */
+
+header .gnb ul li {
+    margin-left: 50px;
+    padding-left: 50px;
+    border-left: 1px solid gray;
+}
+
+header .gnb ul li:first-child {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: 0;
+}
+
+header .hambuger_menu {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 20px;
+    /* background: red; */
+    display: none;
+}
+
+header .hambuger_menu span {
+    position: relative;
+    top: 9px;
+}
+
+header .hambuger_menu span,
+header .hambuger_menu span::before,
+header .hambuger_menu span::after {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: white;
+}
+
+header .hambuger_menu span::before,
+header .hambuger_menu span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+}
+
+header .hambuger_menu span::before { top: -9px;}
+
+header .hambuger_menu span::after { top: 9px;}
+
+@media screen and (max-width: 899px) {
+
+    header .inner {
+        justify-content: center;
+    }
+
+    header .gnb ul {
+        display: none;
+    }
+
+    header .gnb .hambuger_menu {
+        display: block;
+    }
+}
