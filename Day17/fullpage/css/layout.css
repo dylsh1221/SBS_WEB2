@@ -1,0 +1,69 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredericka+the+Great&display=swap');
+*{margin:0;padding:0;border:0;box-sizing:border-box;}
+ol,ul{list-style:none}
+a{text-decoration:none;color:inherit;}
+body{line-height:1;background:#000;color:#fff;}
+
+
+#header{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    border-bottom:1px solid #aaa;
+    display:flex;
+    justify-content:space-between;
+    padding:5vh 5vw;
+}
+
+#header .logo{
+    font: bold 24px/1 "Architects Daughter", "arial";
+    letter-spacing:1px;
+}
+
+#header .gnb ul{
+    display:flex;
+    font: 16px/1 "Architects Daughter", "arial";
+}
+#header .gnb ul > li{
+    margin-right:40px;
+    letter-spacing:1px;
+}
+#header .gnb ul > li:last-child{
+    margin-right:0;
+}
+
+#header .sns{
+    display:flex;
+    font-size:16px;
+}
+#header .sns > li{
+    margin-left:20px;
+}
+#header .sns > li:first-child{
+    margin-left:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
